@@ -1,4 +1,6 @@
 #include QMK_KEYBOARD_H
+#include "keymap_german.h"
+#include "sendstring_german.h"
 
 enum layer_number {
   _QWERTY = 0,
@@ -12,23 +14,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //QWERTY
  [_QWERTY] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
+     KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    DE_SS,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC,
+     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                               DE_Z,    KC_U,    KC_I,    KC_O,    KC_P,    DE_UDIA,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+     KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    DE_ODIA, DE_ADIA,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_NUBS, KC_RBRC,          KC_BSLS, KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
+     KC_LSFT,  DE_Y,   KC_X,    KC_C,    KC_V,    DE_LABK, DE_PLUS,          KC_BSLS, KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  DE_MINS,
   //├────────┼────────┼────────┼────────┼────────┼────────┤────────┤        ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
                               MO(_LOWER), KC_LGUI, KC_LALT, KC_SPC,          KC_ENT,    KC_BSPC,  KC_RALT, MO(_RAISE)
   //                         ├──────────┼─────────┼───────┼────────┤        ├──────────┼─────────┼───────┼────────┤
  ),
 
- 
+
 // LOWER
 
 [_LOWER] = LAYOUT(
-   KC_GRV, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     KC_F7,   KC_F8,   KC_VOLU,  KC_MUTE,  KC_VOLD,
+   DE_CIRC, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     KC_F7,   KC_F8,   KC_VOLU,  KC_MUTE,  KC_VOLD,
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______,_______, _______, _______,
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______,_______, KC_UP, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RIGHT,
